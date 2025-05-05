@@ -1,0 +1,39 @@
+//Copyright (C)2014-2025 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//Tool Version: V1.9.11.01 Education (64-bit)
+//Part Number: GW2A-LV18PG256C8/I7
+//Device: GW2A-18
+//Device Version: C
+//Created Time: Sun 05 04 15:11:17 2025
+
+IO_LOC "display_segments[6]" T11;
+IO_PORT "display_segments[6]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "display_segments[5]" N7;
+IO_PORT "display_segments[5]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "display_segments[4]" N8;
+IO_PORT "display_segments[4]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "display_segments[3]" D11;
+IO_PORT "display_segments[3]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "display_segments[2]" N6;
+IO_PORT "display_segments[2]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "display_segments[1]" B11;
+IO_PORT "display_segments[1]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "display_segments[0]" A11;
+IO_PORT "display_segments[0]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "switches[7]" C12;
+IO_PORT "switches[7]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
+IO_LOC "switches[6]" B12;
+IO_PORT "switches[6]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
+IO_LOC "switches[5]" A14;
+IO_PORT "switches[5]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
+IO_LOC "switches[4]" B13;
+IO_PORT "switches[4]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
+IO_LOC "switches[3]" A15;
+IO_PORT "switches[3]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
+IO_LOC "switches[2]" B14;
+IO_PORT "switches[2]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
+IO_LOC "switches[1]" E15;
+IO_PORT "switches[1]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
+IO_LOC "switches[0]" D14;
+IO_PORT "switches[0]" IO_TYPE=LVCMOS18 PULL_MODE=DOWN BANK_VCCIO=1.8;
