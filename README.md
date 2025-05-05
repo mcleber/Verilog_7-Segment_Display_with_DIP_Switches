@@ -1,6 +1,6 @@
 # Controlling a 7-Segment Display with DIP Switches in Verilog
 
-It is strongly based on the “cistern” example from the book Eletrônica Digital, Verilog e FPGA. 
+This project is heavily inspired by the “cistern” example from the book Eletrônica Digital, Verilog e FPGA.
 
 ## Description
 
@@ -8,29 +8,29 @@ This project implements a BCD (Binary-Coded Decimal) converter that reads DIP sw
 
 ## Repository Structure
 
-assets/ - Images
+- assets/ - Images, schematics and tables
 
-constraints/ - Pin constraint files
+- constraints/ - Pin constraint file
 
-src/ - Verilog source code
+- src/ - Verilog source code
 
 ## Bill of Materials
 
-Tang Primer 20K FPGA (GW2A-LV18PG256C8/I7) with Dock
+- Tang Primer 20K FPGA (GW2A-LV18PG256C8/I7) with Dock
 
-1 Common cathode 7-segment display
+- 1 Common cathode 7-segment display
 
-1 DIP switch (8 positions)
+- 1 DIP switch (8 positions)
 
-7 Current-limiting resistors (~150Ω)
+- 7 Current-limiting resistors (~150Ω)
 
-8 Pull-down resistors (10kΩ)
+- 8 Pull-down resistors (10kΩ)
 
-Jumper wires
+- Jumper wires
 
-1 Breadboard
+- 1 Breadboard
 
-USB-C cable
+- USB-C cable
 
 ## Schematic Diagram
 
@@ -46,21 +46,29 @@ The developed system operates based on two fundamental truth tables that define 
 
 Outputs from Table 1:
 
-D3 = HGFEDCBA
+`D3 = HGFEDCBA`
 
-D2 = H’GFEDCBA + H’G’FEDCBA + H’G’F’EDCBA + H’G’F’E’DCBA
+`D2 = H’GFEDCBA + H’G’FEDCBA + H’G’F’EDCBA + H’G’F’E’DCBA`
 
-D1 = H’GFEDCBA + H’G’FEDCBA + H’G’F’E’D’CBA + H’G’F’E’D’C’BA
+`D1 = H’GFEDCBA + H’G’FEDCBA + H’G’F’E’D’CBA + H’G’F’E’D’C’BA`
 
-D0 = H’GFEDCBA + H’G’F’EDCBA + H’G’F’E’D’CBA + H’G’F’E’D’C’B’A
+`D0 = H’GFEDCBA + H’G’F’EDCBA + H’G’F’E’D’CBA + H’G’F’E’D’C’B’A`
 
 ![Table.2](https://github.com/mcleber/Verilog_7-Segment_Display_with_DIP_Switches/blob/main/assets/Table2.png)
 
+These tables serve as essential references both for the Verilog code implementation and for the practical verification of the circuit.
+
+## Verilog Code
+
+**Available in the `src` directory.**
+
 ## Common Errors and Solutions
 
-**Incorrect use of reserved pins:** During signal mapping, an SPI-dedicated pin was incorrectly assigned to the display LEDs, triggering a ‘cannot be placed according to constraint’ synthesis error. The issue was resolved by reassigning the connection to an available GPIO pin, following the Dock’s pinout documentation.
+During development, I encountered some practical issues that may occur with any beginner:
 
-**Reversed wiring on the display:** One of the segment wires was connected incorrectly, causing incorrect numbers to be displayed. After reviewing the segment order (a–g), I corrected the connections, and the display started working correctly.
+`Incorrect use of reserved pins:` During signal mapping, an SPI-dedicated pin was incorrectly assigned to the display LEDs, triggering a ‘cannot be placed according to constraint’ synthesis error. The issue was resolved by reassigning the connection to an available GPIO pin, following the Dock’s pinout documentation.
+
+`Reversed wiring on the display:` One of the segment wires was connected incorrectly, causing incorrect numbers to be displayed. After reviewing the segment order (a–g), I corrected the connections, and the display started working correctly.
 
 ## Results
 
@@ -68,18 +76,16 @@ The GIF below demonstrates the circuit operation. As the DIP switches are progre
 
 ![circuit operation](https://github.com/mcleber/Verilog_7-Segment_Display_with_DIP_Switches/blob/main/assets/gif_display.gif)
 
-##Technologies Used
+## Conclusion
 
-FPGA: Sipeed Tang Primer 20K (GW2A-LV18PG256C8/I7) with Dock
+This project is a great introduction to the interaction between programmable digital logic and external peripherals. It reinforces fundamental Verilog concepts such as input decoding, display control, and FPGA pin mapping.
 
-HDL: Verilog
+## Technologies Used
 
-Development Tool: Gowin IDE
+- FPGA: Sipeed Tang Primer 20K (GW2A-LV18PG256C8/I7) with Dock
 
-Schematic Design: KiCAD
+- HDL: Verilog
 
-Link
+- Development Tool: Gowin IDE
 
-A complete tutorial is available on my [Medium page](https://medium.com/@mcleber/controlling-a-7-segment-display-with-dip-switches-in-verilog-4ade580d8ba7).
-
-
+- Schematic Design: KiCAD
