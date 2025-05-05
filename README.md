@@ -1,1 +1,1 @@
-# Verilog_Controlling_a_7-Segment_Display_with_DIP_Switches
+# Controlling a 7-Segment Display with DIP Switches in Verilog
