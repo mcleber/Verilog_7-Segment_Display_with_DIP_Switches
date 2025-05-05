@@ -2,11 +2,11 @@
 
 This project is heavily inspired by the “cistern” example from the book Eletrônica Digital, Verilog e FPGA.
 
-## Description
+## 1. Description
 
 This project implements a BCD (Binary-Coded Decimal) converter that reads DIP switch input and controls a 7-segment display, showing digits 0–8 or ‘E’ for invalid combinations. It offers a hands-on introduction to Verilog development and FPGA pin mapping using the Gowin IDE.
 
-## Repository Structure
+## 2. Repository Structure
 
 - assets/ - Images, schematics and tables
 
@@ -14,7 +14,7 @@ This project implements a BCD (Binary-Coded Decimal) converter that reads DIP sw
 
 - src/ - Verilog source code
 
-## Bill of Materials
+## 3. Bill of Materials
 
 - Tang Primer 20K FPGA (GW2A-LV18PG256C8/I7) with Dock
 
@@ -32,13 +32,13 @@ This project implements a BCD (Binary-Coded Decimal) converter that reads DIP sw
 
 - USB-C cable
 
-## Schematic Diagram
+## 4. Schematic Diagram
 
 Below is the schematic diagram of the circuit used to connect the DIP switches and the display to the FPGA.
 
 ![Schematics](https://github.com/mcleber/Verilog_7-Segment_Display_with_DIP_Switches/blob/main/assets/encoder_decoder_bcd_esquematico.png)
 
-## Truth Tables
+## 5. Truth Tables
 
 The developed system operates based on two fundamental truth tables that define the entire behavior of the circuit. The first table establishes the relationship between the DIP switch key combinations and the corresponding decimal values, while the second table determines how these values should be displayed on the display.
 
@@ -58,11 +58,11 @@ Outputs from Table 1:
 
 These tables serve as essential references both for the Verilog code implementation and for the practical verification of the circuit.
 
-## Verilog Code and Constraints
+## 6. Verilog Code and Constraints
 
  Available in the `src` and `constraints` directories.
 
-## Common Errors and Solutions
+## 7. Common Errors and Solutions
 
 During development, I encountered some practical issues that may occur with any beginner:
 
@@ -70,17 +70,17 @@ During development, I encountered some practical issues that may occur with any 
 
 `Reversed wiring on the display:` One of the segment wires was connected incorrectly, causing incorrect numbers to be displayed. After reviewing the segment order (a–g), I corrected the connections, and the display started working correctly.
 
-## Results
+## 8. Results
 
 The GIF below demonstrates the circuit operation. As the DIP switches are progressively activated, the display shows the corresponding decimal value. When all switches are on, it displays ‘8’. Invalid combinations trigger ‘E’ to indicate an input error.
 
 ![circuit operation](https://github.com/mcleber/Verilog_7-Segment_Display_with_DIP_Switches/blob/main/assets/gif_display.gif)
 
-## Conclusion
+## 9. Conclusion
 
 This project is a great introduction to the interaction between programmable digital logic and external peripherals. It reinforces fundamental Verilog concepts such as input decoding, display control, and FPGA pin mapping.
 
-## Technologies Used
+## 10. Technologies Used
 
 - FPGA: Sipeed Tang Primer 20K (GW2A-LV18PG256C8/I7) with Dock
 
