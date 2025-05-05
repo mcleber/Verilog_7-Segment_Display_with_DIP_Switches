@@ -32,7 +32,7 @@ This project implements a BCD (Binary-Coded Decimal) converter that reads DIP sw
 
 - USB-C cable
 
-## Schematic Diagram
+## Hardware Assembly
 
 Below is the schematic diagram of the circuit used to connect the DIP switches and the display to the FPGA.
 
