@@ -1,4 +1,4 @@
-# 7-Segment Display with DIP Switches in Verilog
+# Controlling a 7-Segment Display with DIP Switches in Verilog
 
 It is strongly based on the “cistern” example from the book Eletrônica Digital, Verilog e FPGA. 
 
@@ -14,6 +14,24 @@ constraints/ - Pin constraint files
 
 src/ - Verilog source code
 
+## Bill of Materials
+
+Tang Primer 20K FPGA (GW2A-LV18PG256C8/I7) with Dock
+
+1 Common cathode 7-segment display
+
+1 DIP switch (8 positions)
+
+7 Current-limiting resistors (~150Ω)
+
+8 Pull-down resistors (10kΩ)
+
+Jumper wires
+
+1 Breadboard
+
+USB-C cable
+
 ## Schematic Diagram
 
 Below is the schematic diagram of the circuit used to connect the DIP switches and the display to the FPGA.
@@ -24,7 +42,7 @@ Below is the schematic diagram of the circuit used to connect the DIP switches a
 
 The developed system operates based on two fundamental truth tables that define the entire behavior of the circuit. The first table establishes the relationship between the DIP switch key combinations and the corresponding decimal values, while the second table determines how these values should be displayed on the display.
 
-![Table.1](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*UvgScPqUvBdJD20NY5g_UA.png)
+![Table.1](https://github.com/mcleber/Verilog_7-Segment_Display_with_DIP_Switches/blob/main/assets/Table1.png)
 
 Outputs from Table 1:
 
@@ -36,7 +54,7 @@ D1 = H’GFEDCBA + H’G’FEDCBA + H’G’F’E’D’CBA + H’G’F’E’D�
 
 D0 = H’GFEDCBA + H’G’F’EDCBA + H’G’F’E’D’CBA + H’G’F’E’D’C’B’A
 
-![Table.2](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*mh4_Dez5M7L_RGobRbMypg.png)
+![Table.2](https://github.com/mcleber/Verilog_7-Segment_Display_with_DIP_Switches/blob/main/assets/Table2.png)
 
 ## Common Errors and Solutions
 
