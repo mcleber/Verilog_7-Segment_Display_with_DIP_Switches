@@ -58,9 +58,9 @@ Outputs from Table 1:
 
 These tables serve as essential references both for the Verilog code implementation and for the practical verification of the circuit.
 
-## Verilog Code
+## Verilog Code and Constraints
 
-**Available in the `src` directory.**
+ Available in the `src` and `constraints` directories.
 
 ## Common Errors and Solutions
 
